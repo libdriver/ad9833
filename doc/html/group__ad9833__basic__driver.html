@@ -321,7 +321,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -374,9 +374,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to frequency </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*hz</td><td>points to a freq hz buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*hz</td><td>pointer to a freq hz buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -427,9 +427,9 @@ Functions</h2></td></tr>
 <p>convert the frequency to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hz</td><td>is the freq in hz </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hz</td><td>freq in hz </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -464,7 +464,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an ad9833 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an ad9833 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -498,7 +498,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -551,9 +551,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to phase </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*rad</td><td>points to a phase rad buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*rad</td><td>pointer to a phase rad buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -604,9 +604,9 @@ Functions</h2></td></tr>
 <p>convert the phase to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rad</td><td>is the phase in rad </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rad</td><td>phase in rad </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -641,7 +641,7 @@ Functions</h2></td></tr>
 <p>reset the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -687,8 +687,8 @@ Functions</h2></td></tr>
 <p>enable or disable dac power down </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -740,9 +740,9 @@ Functions</h2></td></tr>
 <p>set the frequency </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>is the set register number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>is the set frequency </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>register number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>frequency of output </td></tr>
   </table>
   </dd>
 </dl>
@@ -795,9 +795,9 @@ Functions</h2></td></tr>
 <p>set the frequency lsb </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>is the set register number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>is the set frequency </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>register number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>frequency of output </td></tr>
   </table>
   </dd>
 </dl>
@@ -850,9 +850,9 @@ Functions</h2></td></tr>
 <p>set the frequency msb </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>is the set register number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>is the set frequency </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>register number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>frequency of output </td></tr>
   </table>
   </dd>
 </dl>
@@ -899,8 +899,8 @@ Functions</h2></td></tr>
 <p>enable or disable internal clock disable </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -946,8 +946,8 @@ Functions</h2></td></tr>
 <p>set output mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the output mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>output mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -999,9 +999,9 @@ Functions</h2></td></tr>
 <p>set the phase </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>is the set register number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">phase</td><td>is the set phase </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>register number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phase</td><td>phase of output </td></tr>
   </table>
   </dd>
 </dl>
@@ -1048,8 +1048,8 @@ Functions</h2></td></tr>
 <p>set the used frequency register </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>is the used register number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>register number </td></tr>
   </table>
   </dd>
 </dl>
@@ -1095,8 +1095,8 @@ Functions</h2></td></tr>
 <p>set the used phase register </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ad9833 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>is the used register number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ad9833 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>register number </td></tr>
   </table>
   </dd>
 </dl>

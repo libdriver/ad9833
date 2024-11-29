@@ -70,7 +70,7 @@ uint8_t ad9833_basic_deinit(void);
 
 /**
  * @brief     basic example set used register
- * @param[in] number is the used register
+ * @param[in] number register number
  * @return    status code
  *            - 0 success
  *            - 1 set used register failed
@@ -80,8 +80,8 @@ uint8_t ad9833_basic_set_used_register(ad9833_number_t number);
 
 /**
  * @brief     basic example set frequency
- * @param[in] number is the set register
- * @param[in] hz is the set freq in hz
+ * @param[in] number register number
+ * @param[in] hz freq in hz
  * @return    status code
  *            - 0 success
  *            - 1 set frequency failed
@@ -91,8 +91,8 @@ uint8_t ad9833_basic_set_frequency(ad9833_number_t number, double hz);
 
 /**
  * @brief     basic example set phase
- * @param[in] number is the set register
- * @param[in] rad is the set rad
+ * @param[in] number register number
+ * @param[in] rad phase in rad
  * @return    status code
  *            - 0 success
  *            - 1 set phase failed
@@ -102,7 +102,7 @@ uint8_t ad9833_basic_set_phase(ad9833_number_t number, double rad);
 
 /**
  * @brief     basic example set output mode
- * @param[in] mode is the set output mode
+ * @param[in] mode output mode
  * @return    status code
  *            - 0 success
  *            - 1 set output mode failed
