@@ -129,48 +129,48 @@ typedef struct ad9833_info_s
 
 /**
  * @brief     initialize ad9833_handle_t structure
- * @param[in] HANDLE points to an ad9833 handle structure
- * @param[in] STRUCTURE is ad9833_handle_t
+ * @param[in] HANDLE pointer to an ad9833 handle structure
+ * @param[in] STRUCTURE ad9833_handle_t
  * @note      none
  */
 #define DRIVER_AD9833_LINK_INIT(HANDLE, STRUCTURE)       memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link spi_init function
- * @param[in] HANDLE points to an ad9833 handle structure
- * @param[in] FUC points to an spi_init function address
+ * @param[in] HANDLE pointer to an ad9833 handle structure
+ * @param[in] FUC pointer to an spi_init function address
  * @note      none
  */
 #define DRIVER_AD9833_LINK_SPI_INIT(HANDLE, FUC)        (HANDLE)->spi_init = FUC
 
 /**
  * @brief     link spi_deinit function
- * @param[in] HANDLE points to an ad9833 handle structure
- * @param[in] FUC points to an spi_deinit function address
+ * @param[in] HANDLE pointer to an ad9833 handle structure
+ * @param[in] FUC pointer to an spi_deinit function address
  * @note      none
  */
 #define DRIVER_AD9833_LINK_SPI_DEINIT(HANDLE, FUC)      (HANDLE)->spi_deinit = FUC
 
 /**
  * @brief     link spi_write_cmd function
- * @param[in] HANDLE points to an ad9833 handle structure
- * @param[in] FUC points to an spi_write_cmd function address
+ * @param[in] HANDLE pointer to an ad9833 handle structure
+ * @param[in] FUC pointer to an spi_write_cmd function address
  * @note      none
  */
 #define DRIVER_AD9833_LINK_SPI_WRITE_CMD(HANDLE, FUC)   (HANDLE)->spi_write_cmd = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an ad9833 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an ad9833 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_AD9833_LINK_DELAY_MS(HANDLE, FUC)        (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an ad9833 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an ad9833 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_AD9833_LINK_DEBUG_PRINT(HANDLE, FUC)     (HANDLE)->debug_print = FUC
@@ -188,7 +188,7 @@ typedef struct ad9833_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an ad9833 info structure
+ * @param[out] *info pointer to an ad9833 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -198,7 +198,7 @@ uint8_t ad9833_info(ad9833_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an ad9833 handle structure
+ * @param[in] *handle pointer to an ad9833 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -211,7 +211,7 @@ uint8_t ad9833_init(ad9833_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an ad9833 handle structure
+ * @param[in] *handle pointer to an ad9833 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -224,8 +224,8 @@ uint8_t ad9833_deinit(ad9833_handle_t *handle);
 
 /**
  * @brief     set the used frequency register
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] number is the used register number
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] number register number
  * @return    status code
  *            - 0 success
  *            - 1 set used frequency register failed
@@ -237,8 +237,8 @@ uint8_t ad9833_set_used_frequency_register(ad9833_handle_t *handle, ad9833_numbe
 
 /**
  * @brief     set the used phase register
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] number is the used register number
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] number register number
  * @return    status code
  *            - 0 success
  *            - 1 set used phase register failed
@@ -250,9 +250,9 @@ uint8_t ad9833_set_used_phase_register(ad9833_handle_t *handle, ad9833_number_t 
 
 /**
  * @brief     set the frequency
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] number is the set register number
- * @param[in] freq is the set frequency
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] number register number
+ * @param[in] freq frequency of output
  * @return    status code
  *            - 0 success
  *            - 1 set frequency failed
@@ -265,9 +265,9 @@ uint8_t ad9833_set_frequency(ad9833_handle_t *handle, ad9833_number_t number, ui
 
 /**
  * @brief     set the frequency lsb
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] number is the set register number
- * @param[in] freq is the set frequency
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] number register number
+ * @param[in] freq frequency of output
  * @return    status code
  *            - 0 success
  *            - 1 set frequency lsb failed
@@ -280,9 +280,9 @@ uint8_t ad9833_set_frequency_lsb(ad9833_handle_t *handle, ad9833_number_t number
 
 /**
  * @brief     set the frequency msb
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] number is the set register number
- * @param[in] freq is the set frequency
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] number register number
+ * @param[in] freq frequency of output
  * @return    status code
  *            - 0 success
  *            - 1 set frequency msb failed
@@ -295,9 +295,9 @@ uint8_t ad9833_set_frequency_msb(ad9833_handle_t *handle, ad9833_number_t number
 
 /**
  * @brief      convert the frequency to the register raw data
- * @param[in]  *handle points to an ad9833 handle structure
- * @param[in]  hz is the freq in hz
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an ad9833 handle structure
+ * @param[in]  hz freq in hz
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -308,9 +308,9 @@ uint8_t ad9833_frequency_convert_to_register(ad9833_handle_t *handle, double hz,
 
 /**
  * @brief      convert the register raw data to frequency
- * @param[in]  *handle points to an ad9833 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *hz points to a freq hz buffer
+ * @param[in]  *handle pointer to an ad9833 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *hz pointer to a freq hz buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -321,9 +321,9 @@ uint8_t ad9833_frequency_convert_to_data(ad9833_handle_t *handle, uint32_t reg, 
 
 /**
  * @brief     set the phase
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] number is the set register number
- * @param[in] phase is the set phase
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] number register number
+ * @param[in] phase phase of output
  * @return    status code
  *            - 0 success
  *            - 1 set phase failed
@@ -336,9 +336,9 @@ uint8_t ad9833_set_phase(ad9833_handle_t *handle, ad9833_number_t number, uint16
 
 /**
  * @brief      convert the phase to the register raw data
- * @param[in]  *handle points to an ad9833 handle structure
- * @param[in]  rad is the phase in rad
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an ad9833 handle structure
+ * @param[in]  rad phase in rad
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -349,9 +349,9 @@ uint8_t ad9833_phase_convert_to_register(ad9833_handle_t *handle, double rad, ui
 
 /**
  * @brief      convert the register raw data to phase
- * @param[in]  *handle points to an ad9833 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *rad points to a phase rad buffer
+ * @param[in]  *handle pointer to an ad9833 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *rad pointer to a phase rad buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -362,7 +362,7 @@ uint8_t ad9833_phase_convert_to_data(ad9833_handle_t *handle, uint16_t reg, doub
 
 /**
  * @brief     reset the chip
- * @param[in] *handle points to an ad9833 handle structure
+ * @param[in] *handle pointer to an ad9833 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 reset failed
@@ -374,8 +374,8 @@ uint8_t ad9833_reset(ad9833_handle_t *handle);
 
 /**
  * @brief     enable or disable dac power down
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set dac power down failed
@@ -387,8 +387,8 @@ uint8_t ad9833_set_dac_power_down(ad9833_handle_t *handle, ad9833_bool_t enable)
 
 /**
  * @brief     enable or disable internal clock disable
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set internal clock disable failed
@@ -400,8 +400,8 @@ uint8_t ad9833_set_internal_clock_disable(ad9833_handle_t *handle, ad9833_bool_t
 
 /**
  * @brief     set output mode
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] mode is the output mode
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] mode output mode
  * @return    status code
  *            - 0 success
  *            - 1 set output mode failed
@@ -424,8 +424,8 @@ uint8_t ad9833_set_output_mode(ad9833_handle_t *handle, ad9833_output_mode_t mod
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an ad9833 handle structure
- * @param[in] value is the set value
+ * @param[in] *handle pointer to an ad9833 handle structure
+ * @param[in] value data written to register
  * @return    status code
  *            - 0 success
  *            - 1 write failed

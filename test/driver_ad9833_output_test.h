@@ -52,8 +52,8 @@ extern "C"{
 
 /**
  * @brief     output test
- * @param[in] number is the register number
- * @param[in] ms is the test time in ms
+ * @param[in] number register number
+ * @param[in] ms test time in ms
  * @return    status code
  *            - 0 success
  *            - 1 test failed
