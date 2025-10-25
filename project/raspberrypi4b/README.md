@@ -92,13 +92,13 @@ find_package(ad9833 REQUIRED)
    ad9833 (-p | --port)
    ```
 
-5. Run ad9833 output test, ms means test time.
+4. Run ad9833 output test, ms means test time.
 
    ```shell
    ad9833 (-t output | --test=output) [--number=<0 | 1>] [--time=<ms>]
    ```
 
-6. Run ad9833 init function.
+5. Run ad9833 init function.
 
    ```shell
    ad9833 (-e init | --example=init)
@@ -114,12 +114,12 @@ find_package(ad9833 REQUIRED)
    ```shell
    ad9833 (-e freq | --example=freq) --freq=<hz> [--number=<0 | 1>]
    ```
-7. Run ad9833 phase function, rad means output phase in rad.
+8. Run ad9833 phase function, rad means output phase in rad.
 
    ```shell
    ad9833 (-e phase | --example=phase) --phase=<rad> [--number=<0 | 1>]
    ```
-7. Run ad9833 mode function.
+9. Run ad9833 mode function.
 
    ```shell
    ad9833 (-e mode | --example=mode) --mode=<SIN | TRI | DAC_HALF | DAC>
