@@ -1,5 +1,6 @@
 var driver__ad9833_8h =
 [
+    [ "AD9833_CRYSTAL_HZ", "group__ad9833__basic__driver.html#gae0df9bfa761276fa5e5d38dc63d59d4c", null ],
     [ "DRIVER_AD9833_LINK_DEBUG_PRINT", "group__ad9833__link__driver.html#gaf5f5450f17a690dceebe4ceb66bb965d", null ],
     [ "DRIVER_AD9833_LINK_DELAY_MS", "group__ad9833__link__driver.html#ga40e07c9d407c2dc7ee0a744155ca1700", null ],
     [ "DRIVER_AD9833_LINK_INIT", "group__ad9833__link__driver.html#gaa75c7cf14c6c89cf959f9422ac4ee0f3", null ],

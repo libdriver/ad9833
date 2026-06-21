@@ -58,6 +58,13 @@ extern "C"{
  */
 
 /**
+ * @brief ad9833 crystal frequency definition
+ */
+#ifndef AD9833_CRYSTAL_HZ 
+    #define AD9833_CRYSTAL_HZ        25000000.0        /* 25.0MHz */
+#endif
+
+/**
  * @brief ad9833 bool enumeration definition
  */
 typedef enum

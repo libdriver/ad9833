@@ -20,6 +20,7 @@ var group__ad9833__basic__driver =
       [ "temperature_max", "structad9833__info__s.html#a3366a5dce9b829e03c3d321c2b4df3f6", null ],
       [ "temperature_min", "structad9833__info__s.html#a8f9dbe66ac0b66ebae0a36fcb4ba368e", null ]
     ] ],
+    [ "AD9833_CRYSTAL_HZ", "group__ad9833__basic__driver.html#gae0df9bfa761276fa5e5d38dc63d59d4c", null ],
     [ "ad9833_handle_t", "group__ad9833__basic__driver.html#ga6e6c0d3e7bad43a04d7e634122784ec1", null ],
     [ "ad9833_info_t", "group__ad9833__basic__driver.html#ga7f6474f99a3b7bfa2f3b1b7cbd64f245", null ],
     [ "ad9833_bool_t", "group__ad9833__basic__driver.html#ga1dd037622d38ea8babc481be361773fb", [

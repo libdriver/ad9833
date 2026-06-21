@@ -148,7 +148,7 @@ ad9833: driver version is 1.0.
 ad9833: min supply voltage is 2.3V.
 ad9833: max supply voltage is 5.5V.
 ad9833: max current is 5.50mA.
-ad9833: max temperature is 85.0C.
+ad9833: max temperature is 105.0C.
 ad9833: min temperature is -40.0C.
 ```
 
