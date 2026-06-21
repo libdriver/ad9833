@@ -45,7 +45,7 @@
 #define SUPPLY_VOLTAGE_MAX        5.5f                           /**< chip max supply voltage */
 #define MAX_CURRENT               5.5f                           /**< chip max current */
 #define TEMPERATURE_MIN           -40.0f                         /**< chip min operating temperature */
-#define TEMPERATURE_MAX           85.0f                          /**< chip max operating temperature */
+#define TEMPERATURE_MAX           105.0f                         /**< chip max operating temperature */
 #define DRIVER_VERSION            1000                           /**< driver version */
 
 /**
@@ -762,18 +762,18 @@ uint8_t ad9833_set_output_mode(ad9833_handle_t *handle, ad9833_output_mode_t mod
  */
 uint8_t ad9833_frequency_convert_to_register(ad9833_handle_t *handle, double hz, uint32_t *reg)
 {
-    if (handle == NULL)                                       /* check handle */
+    if (handle == NULL)                                              /* check handle */
     {
-        return 2;                                             /* return error */
+        return 2;                                                    /* return error */
     }
-    if (handle->inited != 1)                                  /* check handle initialization */
+    if (handle->inited != 1)                                         /* check handle initialization */
     {
-        return 3;                                             /* return error */
+        return 3;                                                    /* return error */
     }
     
-    *reg = (uint32_t)(hz / (25000000.0 / pow(2, 28)));        /* convert real data to register data */
+    *reg = (uint32_t)(hz / (AD9833_CRYSTAL_HZ / pow(2, 28)));        /* convert real data to register data */
     
-    return 0;                                                 /* success return 0 */
+    return 0;                                                        /* success return 0 */
 }
 
 /**
@@ -789,18 +789,18 @@ uint8_t ad9833_frequency_convert_to_register(ad9833_handle_t *handle, double hz,
  */
 uint8_t ad9833_frequency_convert_to_data(ad9833_handle_t *handle, uint32_t reg, double *hz)
 {
-    if (handle == NULL)                                   /* check handle */
+    if (handle == NULL)                                          /* check handle */
     {
-        return 2;                                         /* return error */
+        return 2;                                                /* return error */
     }
-    if (handle->inited != 1)                              /* check handle initialization */
+    if (handle->inited != 1)                                     /* check handle initialization */
     {
-        return 3;                                         /* return error */
+        return 3;                                                /* return error */
     }
     
-    *hz = (double)reg * (25000000.0 / pow(2, 28));        /* convert real data to register data */
+    *hz = (double)reg * (AD9833_CRYSTAL_HZ / pow(2, 28));        /* convert real data to register data */
     
-    return 0;                                             /* success return 0 */
+    return 0;                                                    /* success return 0 */
 }
 
 /**
