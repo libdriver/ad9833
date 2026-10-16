@@ -124,7 +124,7 @@ uint8_t ad9833_init(ad9833_handle_t *handle)
     { 
         handle->debug_print("ad9833: spi init failed.\n");              /* spi init failed */
        
-        return 3;                                                       /* return error */
+        return 1;                                                       /* return error */
     }
     handle->conf = 0;                                                   /* init 0 */
     conf = handle->conf;                                                /* get config */
